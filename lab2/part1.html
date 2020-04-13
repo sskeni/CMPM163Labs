@@ -11,7 +11,101 @@
 	<body>
 		<script src="../three.js-master/build/three.js"></script>
 		<script>
-			// Our Javascript will go here.
+			
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+			camera.position.z = 10;
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+
+			var material_purple = new THREE.MeshBasicMaterial( {color: 0x70349e} );
+			var material_red = new THREE.MeshBasicMaterial( {color: 0xd4372f} );
+			var material_blue = new THREE.MeshBasicMaterial( {color: 0x283da6} );
+			var material_yellow = new THREE.MeshBasicMaterial( {color: 0xdee81a} );
+
+			//central cube
+			var geometry = new THREE.BoxGeometry();
+			var material = new THREE.MeshBasicMaterial( {color: 0x4ea361} );
+			var cube = new THREE.Mesh(geometry, material);
+			scene.add(cube);
+
+			//purple outer cubes
+			var geometry1 = new THREE.BoxGeometry();
+			var cube1 = new THREE.Mesh(geometry1, material_purple);
+			geometry1.translate(4, 0, 0);
+			scene.add(cube1);
+
+			var geometry2 = new THREE.BoxGeometry();
+			var cube2 = new THREE.Mesh(geometry2, material_purple);
+			geometry2.translate(-4, 0, 0);
+			scene.add(cube2);
+
+			//red outer cubes
+			var geometry3 = new THREE.BoxGeometry();
+			var cube3 = new THREE.Mesh(geometry3, material_red);
+			geometry3.translate(0, 0, 4);
+			scene.add(cube3);
+
+			var geometry4 = new THREE.BoxGeometry();
+			var cube4 = new THREE.Mesh(geometry4, material_red);
+			geometry4.translate(0, 0, -4);
+			scene.add(cube4);
+
+			//blue inner cubes
+			var geometry5 = new THREE.BoxGeometry();
+			var cube5 = new THREE.Mesh(geometry5, material_blue);
+			geometry5.translate(0, 0, 3);
+			scene.add(cube5);
+
+			var geometry6 = new THREE.BoxGeometry();
+			var cube6 = new THREE.Mesh(geometry6, material_blue);
+			geometry6.translate(0, 0, -3);
+			scene.add(cube6);
+
+			//yellow inner cubes
+			var geometry7 = new THREE.BoxGeometry();
+			var cube7 = new THREE.Mesh(geometry7, material_yellow);
+			geometry7.translate(0, 0, 3);
+			scene.add(cube7);
+
+			var geometry8 = new THREE.BoxGeometry();
+			var cube8 = new THREE.Mesh(geometry8, material_yellow);
+			geometry8.translate(0, 0, -3);
+			scene.add(cube8);
+
+			function animate()
+			{
+				//central cube
+				geometry.rotateX(0.01);
+				geometry.rotateY(0.01);
+
+				//purple outer cubes
+				geometry1.rotateZ(0.03);
+				geometry2.rotateZ(0.03);
+
+				//red outer cubes
+				geometry3.rotateX(0.03);
+				geometry4.rotateX(0.03);
+
+				//blue inner cubes
+				geometry5.rotateX(0.03);
+				geometry5.rotateY(0.03);
+				geometry6.rotateX(0.03);
+				geometry6.rotateY(0.03);
+
+				//yellow inner cubes
+				geometry7.rotateX(-0.03);
+				geometry7.rotateY(0.03);
+				geometry8.rotateX(-0.03);
+				geometry8.rotateY(0.03);
+
+				requestAnimationFrame(animate);
+				renderer.render(scene, camera);
+			}
+			animate();
+
 		</script>
 	</body>
 </html>
