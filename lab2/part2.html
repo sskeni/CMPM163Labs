@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 2: Intro to Three.js Part 2</title>
+		<style>
+			body { margin: 0; }
+			canvas { display: block; }
+		</style>
+	</head>
+	<body>
+		<script src="../three.js-master/build/three.js"></script>
+		<script src="../three.js-master/examples/js/loaders/GLTFLoader.js"></script>
+		<script>
+
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+			camera.position.z = 200;
+
+			//add light
+			var light = new THREE.PointLight(0xffffff, 1, 1000);
+			light.position.set(0, 50, 50);
+			scene.add(light);
+			
+			var loader = new THREE.GLTFLoader();
+
+			//clock model
+			loader.load('clock.glb', function (gltf) {
+				gltf.scene.rotation.x = 1.5;
+				var scale = 3;
+				gltf.scene.scale.x = scale;
+				gltf.scene.scale.y = scale;
+				gltf.scene.scale.z = scale;
+				gltf.scene.position.y = 100;
+
+				scene.add(gltf.scene);
+			}, function (xhr) {
+				console.log((xhr.loaded / xhr.total * 100) + '% loaded - clock.glb');
+			}, function (error) {
+				console.error(error);
+			});
+
+			//jack-o-lantern model
+			loader.load('citrouille.glb', function (gltf) {
+				var scale = 7;
+				gltf.scene.scale.x = scale;
+				gltf.scene.scale.y = scale;
+				gltf.scene.scale.z = scale;
+				gltf.scene.position.z = -50;
+
+				scene.add(gltf.scene);
+			}, function (xhr) {
+				console.log((xhr.loaded / xhr.total * 100) + '% loaded - citrouille.glb');
+			}, function (error) {
+				console.error(error);
+			});
+
+			//bucket model
+			loader.load('bucket.glb', function (gltf) {
+				var scale = 7;
+				gltf.scene.scale.x = scale;
+				gltf.scene.scale.y = scale;
+				gltf.scene.scale.z = scale;
+				gltf.scene.position.y = -200;
+
+				scene.add(gltf.scene);
+			}, function (xhr) {
+				console.log((xhr.loaded / xhr.total * 100) + '% loaded - bucket.glb');
+			}, function (error) {
+				console.error(error);
+			});
+
+			function animate() {
+
+				requestAnimationFrame(animate);
+				renderer.render(scene, camera);
+			}
+			animate();
+
+		</script>
+	</body>
+</html>
