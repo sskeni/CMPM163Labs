@@ -14,6 +14,8 @@ For the first cube on the left, I created a shader that gradients on the x axis 
 ## Lab 4
 Video: [link](https://drive.google.com/file/d/1gFdLvhPXL-bivbOr8Zn0YwJ-b3Sa8HbJ/view?usp=sharing "link to yet another cubes video")
 
+The tiled cube was made using a formula that mapped the texture( (vUv.x % 0.5) * 2). The second cube from the left was made using three.js with only a texture and no normal map. The middle cube was made using Three.js materials with a texture and a normal map. The forth cube from the left was made by the same method as the middle cube, but with a different texture and normal map. The final cube was made using shaders to parse a texture.
+
 a. u = x/8
 b. v = y/8
 c. white
