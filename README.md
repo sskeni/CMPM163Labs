@@ -19,3 +19,8 @@ The tiled cube was made using a formula that mapped the texture( (vUv.x % 0.5) *
 a. u = x/8
 b. v = y/8
 c. white
+
+## Lab 5
+Video: [link](https://drive.google.com/open?id=1Izm9lSazlhOq39EKCzf2hrjUJiOjP1P4 "link to something that isn't a cube video")
+
+For this project I wanted to see if I could add the classic particle systems found in most racing games. I started by adding a smoke system so that if you were turning hard enough, smoke would come out of the wheels. I had to change the simulation space to "world" so that it would realistically leave the smoke in a 'trail' behind the path of the car. Next I decided to add a celebration firework that would go off whenever you would pass through a check point. This was interesting because I added trails to the particles which really make it look like a firework. The last particle system I added involved adding a new game mechanic. I added a system that would allow you to boost when you hold left shift. Once you held it, it would increase your max speed allowing you to go faster. The particle system I made used the system that allows you to change the color of the particle over its lifetime. I used this to start the particles as blazing white hot and then turning red, then finally turning into smoke. A few smaller touches include modifying the player to have the same skin color as me and the car to be the same color as my car!
