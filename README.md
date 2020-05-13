@@ -28,3 +28,4 @@ For this project I wanted to see if I could add the classic particle systems fou
 ## Lab 6
 Shadertoy: [link](https://www.shadertoy.com/view/3dSBzz "link to another non cube video")
 ![](lab6/Step13.jpg)
+Something cool I found on Shadertoy: [link](https://www.shadertoy.com/view/XsBXWt "wow a third non cube video")
