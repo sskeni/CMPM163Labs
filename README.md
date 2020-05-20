@@ -1,5 +1,10 @@
 # CMPM163Labs
 
+## Lab 7
+Snowy Mountain video: [link](https://drive.google.com/open?id=1r0cW6AVElUbw5bOkvPsjT8XTcRItYdiA "I can't believe its another non cube video")
+
+I made this scene using mostly shaders and one particle system. I started with the boring mountains and water that was made in the tutorial. I started by adding some color to them to make them feel more realistic. I also changed the speed and strength of the waves to create a sense of scale for the mountains. Getting the color of the mountains was quite hard, as I couldn't do it by just trying out things that I already knew. Eventually I ended up looking through every category of nodes until I found the Lerp node. Then it was just a matter of passing variables to control things like height and color into the shader graph. After that, I realized the sky was really boring. I contemplated just finding a sky box online, but figured that to be boring. I ended up messing around in shader graph and eventually used noise to control the shape of the clouds based on their world position, and then added a script to make them move across the space. I then varied their sizes. They are actually all the same base shape, but the shader is modifying their mesh to make them all look unique. Finally I added a fairly simple particle system that would make snow fall all over the mountains. It took a while to get the paramaters right there as well to match the scale set by the water. And there it is! Snowy Mountain scene.
+
 ## Lab 6
 ![](lab6/Step13.jpg)
 My Shadertoy: [link](https://www.shadertoy.com/view/3dSBzz "link to another non cube video")
