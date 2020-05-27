@@ -13,6 +13,11 @@ I started with a personal project I have been working on which involves the play
 
 Here's a video of the game: [link](https://drive.google.com/file/d/1mcEjrZkto7s0gbAUbmjXf8COXvsj0Hmr/view?usp=sharing "I guess this is just a complex cube video")
 
+Partner Responses:
+1. They did part one
+2. The part that ended up being the most difficult was oddly enough pushing their project onto GitHub. They have a moderate amount of experience with git, but They had never tried to push such a extensive amount of files to the origin repo. They found out that there was a huge PDF file from one of the free assets, advertising their other assets.
+3.The most interesting part was seeing how a road system could be implemented randomly, yet structurally.
+
 ## Lab 7
 Snowy Mountain video: [link](https://drive.google.com/open?id=1r0cW6AVElUbw5bOkvPsjT8XTcRItYdiA "I can't believe its another non cube video")
 
