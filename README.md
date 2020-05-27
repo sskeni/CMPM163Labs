@@ -1,5 +1,18 @@
 # CMPM163Labs
 
+Tutorial Buildings
+![](lab8/TutorialCity.png)
+
+Inspiration City (source: http://www.travellushes.com/21-colorful-cities/)
+![](lab8/InspirationCity.jpg)
+
+Final City
+![](lab8/FinalCity.png)
+
+I started with a personal project I have been working on which involves the player using a grapple hook to maneuver a space. For the game, I really wanted to stick to a more symbolic representation of buildings. Instead of using premade assets, I just used simple cubes. I ended up changing the size of everything to make the scale more appropriate for the player. Eventually I had properly scaled buildings that were amazing to swing from as the player, but it felt quite dead. I looked for interesting looking cities on google, and eventually found a heavily photoshopped image of brightly colored buildings. I started by making all of my buildings just random colors, but found that the randomness was too much, as something made by humans would be random, but still follow certain rules. Ultimately, I made the colors based on the height of the buildings, which lead to really cool effects, and almost brings out a construct of social classes. The taller, "better" buildings are one color and the lower ones are different colors. I can almost see people in this world being like "Oh you work in a green building? It's okay you'll get there eventually."
+
+Here's a video of the game: [link](https://drive.google.com/file/d/1mcEjrZkto7s0gbAUbmjXf8COXvsj0Hmr/view?usp=sharing "I guess this is just a complex cube video")
+
 ## Lab 7
 Snowy Mountain video: [link](https://drive.google.com/open?id=1r0cW6AVElUbw5bOkvPsjT8XTcRItYdiA "I can't believe its another non cube video")
 
